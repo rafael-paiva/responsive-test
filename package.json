@@ -1,0 +1,11 @@
+{
+  "name": "responsive-test",
+  "description": "Rafael Paiva responsive test.",
+  "author": "Rafael Paiva (https://github.com/rafael-paiva/)",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-stylus": "^0.21.0",
+    "grunt-contrib-uglify": "^0.9.1"
+  }
+}

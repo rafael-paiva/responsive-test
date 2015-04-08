@@ -1,0 +1,29 @@
+
+/* line 40 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+
+/* line 1 : /Users/v-paivar-ave/Code/responsive-test/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+body{margin:0;font-family:sans-serif;line-height:1.5;color:#555}
+/* line 7 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+h2,h3{font-weight:normal}
+/* line 11 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.headLine{padding:.6em;background:#d52d30;color:#fff}
+/* line 16 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer{padding:.6em;}
+/* line 18 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .sectionTitle{font-size:1.3em;border-bottom:2px solid #ddd}
+/* line 21 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer{max-width:13em;}
+/* line 23 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .image{width:100%}
+/* line 25 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .detail{font-size:.9em;height:2.5em;font-weight:normal;overflow:hidden}
+/* line 30 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .listPrice{color:#b2b0ae}
+/* line 32 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .salePrice{color:#333}
+/* line 34 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .installmentPrice{color:#d52d30;font-size:1.5em;line-height:1;}
+/* line 38 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
+.mainContainer .productContainer .installmentPrice span{font-size:.6em;vertical-align:top}
