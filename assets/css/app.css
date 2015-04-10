@@ -1,29 +1,171 @@
-
-/* line 40 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-
-/* line 1 : /Users/v-paivar-ave/Code/responsive-test/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
-
-/* line 1 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-body{margin:0;font-family:sans-serif;line-height:1.5;color:#555}
-/* line 7 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-h2,h3{font-weight:normal}
-/* line 11 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.headLine{padding:.6em;background:#d52d30;color:#fff}
-/* line 16 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer{padding:.6em;}
-/* line 18 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .sectionTitle{font-size:1.3em;border-bottom:2px solid #ddd}
-/* line 21 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer{max-width:13em;}
-/* line 23 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .image{width:100%}
-/* line 25 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .detail{font-size:.9em;height:2.5em;font-weight:normal;overflow:hidden}
-/* line 30 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .listPrice{color:#b2b0ae}
-/* line 32 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .salePrice{color:#333}
-/* line 34 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .installmentPrice{color:#d52d30;font-size:1.5em;line-height:1;}
-/* line 38 : /Users/v-paivar-ave/Code/responsive-test/assets/stylus/app.styl */
-.mainContainer .productContainer .installmentPrice span{font-size:.6em;vertical-align:top}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #555;
+}
+h2,
+h3 {
+  font-weight: normal;
+}
+.reloadIcon {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.25em;
+  float: right;
+}
+.reloadIcon:before,
+.reloadIcon:after,
+.reloadIcon a:before,
+.reloadIcon a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.reloadIcon a:link {
+  border: 0;
+  padding-left: 23px;
+  color: #fff;
+  background-color: #808080;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  display: inline-block;
+  height: 21px;
+}
+@media screen and (max-width: 725px) {
+  .reloadIcon a:link {
+    width: 50px;
+  }
+}
+@media screen and (min-width: 725px) {
+  .reloadIcon a:link {
+    width: 0;
+  }
+}
+.reloadIcon a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.reloadIcon a:before {
+  left: 5px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+  margin-top: -6px;
+  background: transparent;
+  border-radius: 16px;
+}
+.reloadIcon a:after {
+  left: 12px;
+  border: 4px solid #808080;
+  border-width: 4px 2px 4px 4px;
+  border-left-color: #fff;
+  margin: -8px 0 0;
+  background: transparent;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  color: #c3c3c3;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span.rated:before,
+.rating > span.rated ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: #808080;
+}
+.headLine {
+  padding: 0.6em;
+  background: #d52d30;
+  color: #fff;
+}
+.mainContainer {
+  padding: 0.6em;
+}
+.mainContainer .sectionTitle {
+  font-size: 1.2em;
+  border-bottom: 2px solid #ddd;
+}
+.mainContainer .productContainer {
+  display: inline-block;
+}
+.mainContainer .productContainer .detail {
+  font-size: 0.9em;
+  height: 2.5em;
+  font-weight: normal;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.mainContainer .productContainer .listPrice {
+  color: #b2b0ae;
+}
+.mainContainer .productContainer .salePrice {
+  color: #333;
+}
+.mainContainer .productContainer .installmentPrice {
+  color: #d52d30;
+  font-size: 1.5em;
+  line-height: 1;
+}
+.mainContainer .productContainer .installmentPrice span {
+  font-size: 0.6em;
+  vertical-align: top;
+}
+@media screen and (min-width: 725px) {
+  .carouselHolder {
+    max-width: 448px;
+  }
+  .productContainer {
+    max-width: 14em;
+  }
+  .productContainer .image {
+    max-width: 100%;
+  }
+  .section1,
+  .section2 {
+    float: left;
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 724px) {
+  .carouselHolder {
+    max-width: 320px;
+  }
+  .productContainer {
+    max-width: 20em;
+  }
+  .productContainer .image {
+    max-width: 40%;
+    float: left;
+  }
+  .productContainer .detailsHolder {
+    float: right;
+    max-width: 55%;
+  }
+  .section1,
+  .section2 {
+    max-width: 22em;
+  }
+}
+@media screen and (min-width: 949px) {
+  .carouselHolder {
+    max-width: 672px;
+  }
+}
+@media screen and (min-width: 1173px) {
+  .carouselHolder {
+    max-width: 896px;
+  }
+}

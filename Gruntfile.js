@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     stylus: {
       build: {
         options: {
-          linenos: true,
           compress: true
         },
         files: [{

@@ -1,3 +1,7 @@
+$breakpointNarrow = 725px
+$breakpointWide1 = 949px
+$breakpointWide2 = 1173px
+
 body
   margin 0
   font-family sans-serif
@@ -8,6 +12,72 @@ h2
 h3
   font-weight normal
 
+.reloadIcon
+  position relative
+  z-index 1
+  overflow hidden
+  list-style none
+  padding 0
+  margin 0 0 0.25em
+  float right
+  &:before
+  &:after
+  a:before
+  a:after
+    content ""
+    position absolute
+    top 50%
+    left 0
+  a
+    &:link
+      border 0
+      padding-left 23px
+      color #FFF
+      background-color #808080
+      border-radius 4px
+      text-decoration none
+      font-size 0.8em
+      letter-spacing 1px
+      display inline-block
+      @media screen and (max-width: $breakpointNarrow)
+        width 50px
+      @media screen and (min-width: $breakpointNarrow)
+        width 0
+      height 21px
+    &:visited
+      color #FFF
+      text-decoration none
+    &:before
+      left 5px
+      width 9px
+      height 9px
+      border 2px solid #FFF
+      margin-top -6px
+      background transparent
+      border-radius 16px
+    &:after
+      left 12px
+      border 4px solid #808080
+      border-width 4px 2px 4px 4px
+      border-left-color #FFF
+      margin -8px 0 0
+      background transparent
+
+.rating
+  unicode-bidi bidi-override
+  direction rtl
+  text-align left
+  color #C3C3C3
+  > span
+    display inline-block
+    position relative
+    width 1.1em
+    &.rated:before
+    &.rated ~ span:before
+      content "\2605"
+      position absolute
+      color #808080
+
 .headLine
   padding 0.6em
   background #D52D30
@@ -16,17 +86,16 @@ h3
 .mainContainer
   padding 0.6em
   .sectionTitle
-    font-size 1.3em
+    font-size 1.2em
     border-bottom 2px solid #DDD
   .productContainer
-    max-width 13em
-    .image
-      width 100%
+    display inline-block
     .detail
       font-size 0.9em
       height 2.5em
       font-weight normal
       overflow hidden
+      margin-top 2px
     .listPrice
       color #B2B0AE
     .salePrice
@@ -38,3 +107,38 @@ h3
       span
         font-size 0.6em
         vertical-align top
+
+@media screen and (min-width: $breakpointNarrow)
+  .carouselHolder
+    max-width 448px
+  .productContainer
+    max-width 14em
+    .image
+      max-width 100%
+  .section1
+  .section2
+    float left
+    margin-left 15px
+
+@media screen and (max-width: $breakpointNarrow - 1)
+  .carouselHolder
+    max-width 320px
+  .productContainer
+    max-width 20em
+    .image
+      max-width 40%
+      float left
+    .detailsHolder
+      float right
+      max-width 55%
+  .section1
+  .section2
+    max-width 22em
+
+@media screen and (min-width: $breakpointWide1)
+  .carouselHolder
+    max-width 672px
+
+@media screen and (min-width: $breakpointWide2)
+  .carouselHolder
+    max-width 896px
