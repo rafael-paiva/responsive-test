@@ -1,3 +1,4 @@
+// Responsive breakpoints
 $breakpointNarrow = 725px
 $breakpointWide1 = 949px
 $breakpointWide2 = 1173px
@@ -12,6 +13,7 @@ h2
 h3
   font-weight normal
 
+// CSS Reload Icon
 .reloadIcon
   position relative
   z-index 1
@@ -63,6 +65,7 @@ h3
       margin -8px 0 0
       background transparent
 
+// CSS Rating start
 .rating
   unicode-bidi bidi-override
   direction rtl
@@ -76,12 +79,15 @@ h3
     &.rated ~ span:before
       content "\2605"
       position absolute
-      color #808080
+      color #f6bb15
 
 .headLine
   padding 0.6em
   background #D52D30
   color #FFFFFF
+  font-family fantasy, sans-serif
+  letter-spacing 1.4em
+  text-align center
 
 .mainContainer
   padding 0.6em
@@ -97,9 +103,14 @@ h3
       overflow hidden
       margin-top 2px
     .listPrice
+    .salePrice
+    .installmentPrice
+      font-size 0.9em
+    .listPrice
       color #B2B0AE
     .salePrice
       color #333
+      font-weight 600
     .installmentPrice
       color #D52D30
       font-size 1.5em
@@ -108,18 +119,7 @@ h3
         font-size 0.6em
         vertical-align top
 
-@media screen and (min-width: $breakpointNarrow)
-  .carouselHolder
-    max-width 448px
-  .productContainer
-    max-width 14em
-    .image
-      max-width 100%
-  .section1
-  .section2
-    float left
-    margin-left 15px
-
+// Narrow view
 @media screen and (max-width: $breakpointNarrow - 1)
   .carouselHolder
     max-width 320px
@@ -135,10 +135,47 @@ h3
   .section2
     max-width 22em
 
+// Medium view (first breakpoint)
+@media screen and (min-width: $breakpointNarrow)
+  .carouselHolder
+    max-width 448px
+    padding-left 20px
+    margin-left 15px
+  .productContainer
+    max-width 14em
+    .image
+      max-width 100%
+  .section1
+  .section2
+    float left
+  .section2
+    .sectionTitle
+      padding-left 25px
+
+// Medium larger view (second breakpoint)
 @media screen and (min-width: $breakpointWide1)
   .carouselHolder
     max-width 672px
 
+// Large view (third breakpoint)
 @media screen and (min-width: $breakpointWide2)
   .carouselHolder
     max-width 896px
+
+// Carousel overrides
+.carouselHolder
+  [type="button"]:before
+    color #d52d30
+  .slick-prev
+  .slick-next
+    width auto
+    height auto
+    &:before
+      font-size 40px
+  .slick-dots
+    li
+      button:before
+        font-size 12px
+      &.slick-active
+        button:before
+          color #d52d30
